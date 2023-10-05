@@ -21,13 +21,28 @@
 }
 .header__link {
   @include m.default-text(0, 16px, 400, 24px);
+  position: relative;
+  padding: 2px;
   color: #fff;
   letter-spacing: 0.024px;
   transition: color 0.5s ease-in-out;
 }
-.header__link:hover {
+.header__link::after {
+  @include m.psevdo(inline-block, 0, 2px);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.header__link:hover{
   color: #f4d867;
 }
+.header__link:hover::after{
+  width: 100%;
+  background-color: #f4ce47;
+}
+
 .header__wrapper-inner {
   @include m.flexbox(center, center);
   gap: 20px;

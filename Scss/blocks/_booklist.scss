@@ -29,6 +29,26 @@
   border: 1px solid transparent;
   border-radius: 20px;
 }
+.booklist__item-last {
+  background-color: #f4ce47;
+  transition: background-color 0.5s ease-in-out;
+}
+.booklist__item-last:hover {
+  background-color: #f1a72b;
+}
+.booklist__last-desc {
+  @include m.default-text(0, 42px, 500, 40px);
+  margin: 0 auto;
+  padding: 68px;
+  color:  #000000de;
+  text-align: center;
+  letter-spacing: 0.08px;
+  text-transform: uppercase;
+  transition: color 0.5s ease-in-out;
+}
+.booklist__item-last:hover .booklist__last-desc {
+  color: #fff;
+}
 .booklist__item-wrapper {
   @include m.flexbox(start, space-between);
   flex-direction: column;
@@ -168,21 +188,21 @@ form {
   .booklist__label-star {
     padding: 6px 10px;
   }
-.booklist__label-commet::after {
-  width: 13px;
-  height: 13px;
-}
-.booklist__label-star::after {
-  width: 13px;
-  height: 13px;
-}
-.booklist__price {
-  font-size: 16px;
-}
-.booklist__save {
-  width: 60px;
-  height: 40px;
-  padding: 6px;
-  background-size: 24px 24px;
-}
+  .booklist__label-commet::after {
+    width: 13px;
+    height: 13px;
+  }
+  .booklist__label-star::after {
+    width: 13px;
+    height: 13px;
+  }
+  .booklist__price {
+    font-size: 16px;
+  }
+  .booklist__save {
+    width: 60px;
+    height: 40px;
+    padding: 6px;
+    background-size: 24px 24px;
+  }
 }

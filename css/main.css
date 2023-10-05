@@ -399,14 +399,34 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  position: relative;
+  padding: 2px;
   color: #fff;
   letter-spacing: 0.024px;
   -webkit-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
 }
 
+.header__link::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .header__link:hover {
   color: #f4d867;
+}
+
+.header__link:hover::after {
+  width: 100%;
+  background-color: #f4ce47;
 }
 
 .header__wrapper-inner {
@@ -893,6 +913,36 @@ body {
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 20px;
+}
+
+.booklist__item-last {
+  background-color: #f4ce47;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.booklist__item-last:hover {
+  background-color: #f1a72b;
+}
+
+.booklist__last-desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 40px;
+  margin: 0 auto;
+  padding: 68px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  text-align: center;
+  letter-spacing: 0.08px;
+  text-transform: uppercase;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.booklist__item-last:hover .booklist__last-desc {
+  color: #fff;
 }
 
 .booklist__item-wrapper {
