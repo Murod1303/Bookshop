@@ -1,0 +1,177 @@
+@use "../mixins" as m;
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+// for desctop 
+.header__wrapper {
+  @include m.flexbox(center, space-between);
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  background:  #2a2c2e;
+  backdrop-filter: blur(46.5px);
+}
+
+.header__list {
+  @include m.flexbox(center, center);
+  gap: 32px;
+}
+.header__link {
+  @include m.default-text(0, 16px, 400, 24px);
+  color: #fff;
+  letter-spacing: 0.024px;
+  transition: color 0.5s ease-in-out;
+}
+.header__link:hover {
+  color: #f4d867;
+}
+.header__wrapper-inner {
+  @include m.flexbox(center, center);
+  gap: 20px;
+}
+.btn {
+  @include m.flexbox(center, center);
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.btn__search {
+  background-image: url(../../images/Search.svg);
+  background-size: 100% 100%;
+}
+.btn__save {
+  background-image: url(../../images/book.svg);
+  background-size: 100% 100%;
+}
+.btn__sale {
+  background-image: url(../../images/Cart.svg);
+  background-size: 100% 100%;
+}
+.header__btn-login {
+  @include m.flexbox(center, center);
+  @include m.default-text(0, 16px, 500, 24px);
+  margin-left: 20px;
+  padding: 16px 28px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background-color: #f4ce47;
+  color: #000000de;
+  letter-spacing: 0.024px;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.header__btn-login:hover {
+  background-color: #ea1538;
+  color: #fff;
+}
+
+.header__switch {
+  display: none;
+  width: 24px;
+  height: 24px;
+  padding:  10px;
+  background-image: url(../../images/menu.svg);
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+// for mobile 
+.header__swtich-wrapper {
+  @include m.flexbox(center, center);
+  flex-direction: column;
+  display: none;
+  padding:20px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #2a2c2e;
+}
+.header__list-swtich {
+  @include m.flexbox(center, center);
+  flex-direction: column;
+  gap: 32px;
+}
+.header__link-swtich {
+  @include m.default-text(0, 16px, 400, 24px);
+  color: #fff;
+  letter-spacing: 0.024px;
+  transition: color 0.5s ease-in-out;
+}
+.header__link-swtich:hover {
+  color: #f4d867;
+}
+.header__wrapper-inner-swtich {
+  @include m.flexbox(center, center);
+  flex-direction: column;
+  gap: 20px;
+}
+.header__switch-inner {
+  @include m.flexbox(center, center);
+  gap: 20px;
+}
+.btn-swtich {
+  @include m.flexbox(center, center);
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.btn__search-swtich {
+  background-image: url(../../images/Search.svg);
+  background-size: 100% 100%;
+}
+.btn__save-swtich {
+  background-image: url(../../images/book.svg);
+  background-size: 100% 100%;
+}
+.btn__sale-swtich {
+  background-image: url(../../images/Cart.svg);
+  background-size: 100% 100%;
+}
+.header__btn-login-swtich {
+  @include m.flexbox(center, center);
+  @include m.default-text(0, 16px, 500, 24px);
+  padding: 16px 28px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background-color: #f4ce47;
+  color: #000000de;
+  letter-spacing: 0.024px;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.header__btn-login-swtich:hover {
+  background-color: #ea1538;
+  color: #fff;
+}
+
+
+// media for responsive
+
+@media only screen and (max-width:576px) {
+  .header-nav {
+    display: none;
+  }
+  .header__wrapper-inner {
+    display: none;
+  }
+  .header__btn-login {
+    display: none;
+  }
+  .header__switch {
+    display: inline-block;
+  }
+  .header__swtich-wrapper {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width:1015px) and (min-width:738px) {
+  .header__wrapper-inner {
+    margin: 0 auto;
+  }
+}

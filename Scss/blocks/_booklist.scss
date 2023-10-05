@@ -1,0 +1,188 @@
+@use "../mixins" as m;
+
+.booklist {
+  padding-top: 44px;
+  padding-bottom: 44px;
+  background-color: #2a2c2e;
+}
+
+.booklist__title {
+  @include m.default-text(32px, 32px, 500, 40px);
+  color: #fff;
+  letter-spacing: 0.08px;
+  text-transform: uppercase;
+}
+.booklist__img {
+  height: 100%;
+}
+.booklist__list {
+  display: grid;
+  grid-template:repeat(3, auto)/ repeat(3, auto);
+  gap: 12px;
+}
+.booklist__item {
+  position: relative;
+  @include m.flexbox(start, start);
+  gap: 8px;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+.booklist__item-wrapper {
+  @include m.flexbox(start, space-between);
+  flex-direction: column;
+  gap: 20px;
+}
+.booklist__name-wrapper{
+  display: flex;
+  flex-direction: column
+}
+.booklist__author {
+  @include m.default-text(4px, 14px, 400, 20px);
+  color: #000000de;
+  letter-spacing: 0.021px;
+}
+.booklist__name {
+  @include m.default-text(4px, 14px, 600, 20px);
+  color: #000000de;
+  letter-spacing: 0.021px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.booklist__label-commet {
+  @include m.flexbox(center, center);
+  max-width: 62px;
+  width: 100%;
+  padding: 8px 12px;
+  gap: 4px;
+  border: 1px solid #000;
+  border-radius: 31px;
+}
+.booklist__count {
+  @include m.default-text(0, 12px, 400, 16px);
+  color:  #000000de;
+  letter-spacing: 0.018px;
+}
+.booklist__label-commet::after {
+  @include m.psevdo(inline-block, 16px, 16px);
+  background-image: url("../../images/commet.svg");
+  background-size: 100% 100%;
+}
+.booklist__label-star {
+  @include m.flexbox(center, center);
+  max-width: 92px;
+  width: 100%;
+  padding: 8px 12px;
+  gap: 4px;
+  border: 1px solid #000;
+  border-radius: 31px;
+}
+.booklist__count-rank , .booklist__count-all {
+  @include m.default-text(0, 12px, 400, 16px);
+  color: #000000de;
+  letter-spacing: 0.018px;
+  order: 0;
+}
+.booklist__count-all {
+  order: 2;
+}
+.booklist__label-star::after {
+  @include m.psevdo(inline-block, 16px, 16px);
+  background-image: url("../../images/star.svg");
+  background-size: 100% 100%;
+  order: 1;
+}
+
+.booklist__price {
+  @include m.default-text(0, 20px, 400, 24px);
+  color: #000000de;
+  letter-spacing: 0.03px;
+}
+.booklist__save {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: #2a2c2e;
+  background-image: url("../../images/save.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width:986px) {
+  .booklist__list {
+    display: grid;
+    grid-template:repeat(2, auto)/ repeat(2, auto);
+    gap: 8px;
+  } 
+}
+
+@media only screen and (max-width:676px) {
+  .booklist__list {
+    display: grid;
+    justify-content: center;
+    grid-template:repeat(1, 216px)/ repeat(1, 395px);
+    gap: 8px;
+  } 
+}
+
+@media only screen and (max-width:442px) {
+  .booklist__list {
+    display: grid;
+    justify-content: center;
+    grid-template:repeat(1, 1fr)/ repeat(1, 1fr);
+    gap: 8px;
+  } 
+  .booklist__item-wrapper {
+    padding: 8px;
+    gap: 10px;
+  }
+  .booklist__save {
+    position: static;
+    display: inline-block;
+    width: 80px;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width:360px) {
+  .booklist__list {
+    gap: 8px;
+  }
+  .booklist__author {
+    font-size: 12px;
+  }
+  .booklist__name {
+    font-size: 12px;
+  }
+  .booklist__label-commet {
+    padding: 6px 10px;
+  }
+  .booklist__label-star {
+    padding: 6px 10px;
+  }
+.booklist__label-commet::after {
+  width: 13px;
+  height: 13px;
+}
+.booklist__label-star::after {
+  width: 13px;
+  height: 13px;
+}
+.booklist__price {
+  font-size: 16px;
+}
+.booklist__save {
+  width: 60px;
+  height: 40px;
+  padding: 6px;
+  background-size: 24px 24px;
+}
+}

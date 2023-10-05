@@ -1,0 +1,147 @@
+@use "../mixins" as m;
+
+.hero {
+  padding-bottom: 24px;
+}
+
+.hero__title {
+  max-width: 1150px;
+  width: 100%;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 75px;
+  color: #2a2c2e;
+  user-select: none;
+}
+
+.hero__wrapper-inner {
+  max-width: 1196px;
+  width: 100%;
+  @include m.flexbox(start, center);
+  gap: 8px;
+}
+.hero__bookadd {
+  position: relative;
+  width: 50%;
+  height: 348px;
+  background-image: url("../../images/bookhero.png");
+  background-size: 100% 100%;
+  transition: background-image 0.5s ease-in-out;
+}
+.hero__bookadd:hover {
+  background-image: url("../../images/hoverbook.png");
+}
+
+.hero__bookadd-info {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  @include m.default-text(0, 16px, 500, 24px);
+  display: none;
+  max-width: 204px;
+  width: 100%;
+  padding: 16px;
+  color: #f4ce47;
+  text-align: center;
+  letter-spacing: 0.024px;
+  border: 1.5px solid transparent;
+  border-radius: 16px;
+  background-color:#2a2c2e;
+}
+.hero__bookadd:hover .hero__bookadd-info {
+  display: inline-block;
+}
+
+.hero__find {
+  width: 50%;
+  height: 348px;
+  padding: 24px;
+  background-color: #2a2c2e;
+  background-image: url("../../images/searchhero.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.hero__inner-title {
+  @include m.default-text(20px, 32px, 500, 40px);
+  max-width: 281px;
+  width: 100%;
+  color: #fff;
+  letter-spacing: 0.08px;
+  text-transform: uppercase;
+}
+.hero__desc {
+  @include m.default-text(72px, 16px, 300, 24px);
+  max-width: 382px;
+  width: 100%;
+  color:#fff;
+  letter-spacing: 0.024px;
+}
+.hero__link {
+  @include m.default-text(0, 16px, 500, 24px);
+  display: inline-block;
+  max-width: 161px;
+  width: 100%;
+  padding: 16px;
+  color: #f4ce47;
+  text-align: center;
+  letter-spacing: 0.024px;
+  border-radius: 16px;
+  border: 1.5px solid #f4ce47;
+  transition: background-color 0.5s ease-in-out;
+  
+}
+
+.hero__find:hover {
+  background-color: #f1a72b;
+}
+.hero__find:hover .hero__link {
+  background-color: #2a2c2e;
+  border: 1.5px solid #2a2c2e;
+}
+
+@media only screen and (max-width: 800px) {
+  .hero__wrapper-inner {
+    flex-wrap: wrap;
+  }
+  .hero__bookadd {
+    flex-grow: 1;
+  }
+  .hero__find {
+    flex-grow: 1;
+    height: auto;
+  }
+.hero__title {
+  font-size: 55px;
+}
+}
+
+@media only screen and (max-width: 496px) {
+  .hero__title {
+    font-size: 35px;
+  }
+  .hero__inner-title {
+    font-size: 25px;
+  }
+  .hero__desc {
+    max-width: 250px;
+    width: 100%;
+    margin-bottom: 36px;
+    font-size: 14px;
+  }
+  .hero__link {
+    max-width: 140px;
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+  .hero__bookadd-info {
+    max-width: 160px;
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}

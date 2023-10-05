@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>BookshopMS</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- navbar for desctop -->
+      <div class="header__wrapper">
+        <a href="#">
+          <img src="./images/logo.svg" alt="site logo" width="166" height="40">
+        </a>
+        <nav class="header-nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Books  
+              </a>
+            </li>
+            <li>
+              <a class="header__link" href="#">
+                Authors
+              </a>
+            </li>
+            <li>
+              <a class="header__link" href="#">
+                What to Read?
+              </a>
+            </li>
+            <li>
+              <a class="header__link" href="#">
+                Gift Ideas
+              </a>
+            </li>
+            <li>
+              <a class="header__link" href="#">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__wrapper-inner">
+          <button class="btn btn__search">
+          </button>
+          <button class="btn btn__save">
+          </button>
+          <button class="btn btn__sale">
+          </button>
+          <a class="header__btn-login" href="#">
+            Login
+          </a>
+        </div>
+        <button class="header__switch" type="button">
+        </button>
+      </div>
+
+      <!-- navbar for mobile  -->
+      <div class="header__swtich-wrapper">
+        <nav class="header-nav-swtich">
+          <ul class="header__list-swtich">
+            <li class="header__item-swtich">
+              <a class="header__link-swtich" href="#">
+                Books
+              </a>
+            </li>
+            <li class="header__item-swtich">
+              <a class="header__link-swtich" href="#">
+                Authors
+              </a>
+            </li>
+            <li class="header__item-swtich">
+              <a class="header__link-swtich" href="#">
+                What to Read?
+              </a>
+            </li>
+            <li class="header__item-swtich">
+              <a class="header__link-swtich" href="#">
+                Gift Ideas
+              </a>
+            </li>
+            <li class="header__item-swtich">
+              <a class="header__link-swtich" href="#">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__wrapper-inner-swtich">
+          <div class="header__switch-inner">
+            <button class="btn-swtich btn__search-swtich">
+            </button>
+            <button class="btn-swtich btn__save-swtich">
+            </button>
+            <button class="btn-swtich btn__sale-swtich">
+            </button>
+          </div>
+          <a class="header__btn-login-swtich" href="#">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__wrapper">
+          <h1 class="visually-hidden">
+            all books here
+          </h1>
+          <h2 class="hero__title">
+            Reading makes the World Huge 
+          </h2>
+          <div class="hero__wrapper-inner">
+            <div class="hero__find">
+              <h3 class="hero__inner-title">
+                FIND SOMETHING TO READ
+              </h3>
+              <p class="hero__desc">
+                Fancy something unusual and unpredictable? Funny or exciting? No problem. Check out the collections we have prepared for you.
+              </p>
+              <a class="hero__link" href="#">
+                BROWSE NOW
+              </a>
+            </div>
+            <div class="hero__bookadd">
+              <a class="hero__bookadd-info" href="#">
+                More Information
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booklist">
+      <div class="container">
+        <div class="booklist__wrapper">
+          <h3 class="booklist__title">
+            BestSellers
+          </h3>
+          <ul class="booklist__list">
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+              </button>
+              </div>
+            </li>
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+              </button>
+              </div>
+            </li>
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+              </button>
+              </div>
+            </li>
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+              </button>
+              </div>
+            </li>
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+              </button>
+              </div>
+            </li>
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+              </button>
+              </div>
+            </li>
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+              </button>
+              </div>
+            </li>
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+              </button>
+              </div>
+            </li>
+            <li class="booklist__item">
+              <img src="./images/img.png" alt="" class="booklist__img">
+              <div class="booklist__item-wrapper">
+                <div class="booklist__name-wrapper">
+                  <span class="booklist__author">
+                    M.ario Puzo
+                  </span>
+                  <strong class="booklist__name">
+                    The Godfather
+                  </strong>
+                </div>
+                <form class="booklist__form">
+                  <label class="booklist__label-commet">
+                    <span class="booklist__count">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                  </label>
+
+                  <label class="booklist__label-star">
+                    <span class="booklist__count-rank">
+                      42
+                    </span>
+                    <input style="display: none;"  type="checkbox">
+                    <span class="booklist__count-all">
+                      (420)
+                    </span>
+                  </label>
+                </form>
+                <ins class="booklist__price">
+                  $20.000
+                </ins>
+                <button class="booklist__save" type="button">
+                </button>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    
+  </footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@mixin flexbox($ai, $jc) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin default-text($mb, $fz, $fw, $lh) {
+  margin-top: 0;
+  margin-bottom: $mb;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin psevdo($display, $W, $h) {
+  content: "";
+  display: $display;
+  width: $W;
+  height: $h;
+}
+
